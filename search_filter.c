@@ -7,6 +7,9 @@ int age;
 char slot[20];
 struct Node *left, *right;
 } Node;
-Node ID(Node* root,int id){
+Node patientID(Node* root,int id){
+  
+}
+Node slot(){
   
 }
