@@ -13,3 +13,11 @@ struct node {
     struct node* right;
 };
 typedef struct node* AVLNODE;
+AVLNODE create(Appointment appt);
+int height(AVLNODE root);
+int balancefactor(AVLNODE root);
+AVLNODE rotateLeft(AVLNODE x);
+AVLNODE rotateRight(AVLNODE x);
+AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt);
+AVLNODE deleteNodeInAVL(AVLNODE root, int id);
+AVLNODE search(AVLNODE root, int id);
