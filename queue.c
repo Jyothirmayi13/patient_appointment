@@ -22,5 +22,5 @@ void addToHistory(AVLNODE node, Appointment appt)
 
     printf("Appointment added to history\n");
 }
-void patientdetails(Queue *q)
+void patientdetails(Queue *q,Appointment appt)
 //traverse queue!
