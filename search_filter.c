@@ -1,13 +1,8 @@
 #include <stdio.h>
 #include <patient_history.c>
-typedef struct Node {
-int id;
-char name[50];
-int age;
-char slot[20];
-struct Node *left, *right;
-} Node;
+#include avl.h
 Node patientID(Node* root,int id){
+  
   
 }
 Node slot(){
