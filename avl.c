@@ -67,6 +67,7 @@ AVLNODE rotateLeft(AVLNODE x) {
     return y;
 }
 AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt) {
+    if(appt==root->data
     if(root == NULL) {
         root = newNode(appt);
         printf("Appointment booked successfully.\n");
