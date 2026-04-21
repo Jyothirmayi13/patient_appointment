@@ -68,6 +68,8 @@ AVLNODE rotateLeft(AVLNODE x) {
 }
 AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt) {
     if(appt==root->data.id){
+        addToHistory(root,appt);
+        return root;)
         
     if(root == NULL) {
         root = newNode(appt);
