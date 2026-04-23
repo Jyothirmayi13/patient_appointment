@@ -3,8 +3,8 @@
 #include "avl.h"
 
 void initQueue(Queue* q) {
-    q->front = NULL;
-    q->rear = NULL;
+    q->front = q->rear = NULL;
+    
 }
 
 void enqueue(Queue* q, int appointId) {
