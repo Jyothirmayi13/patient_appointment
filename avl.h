@@ -1,3 +1,6 @@
+#ifndef AVL_H
+#define AVL_H
+
 typedef struct QNode {
     Appointment data;
     struct QNode* next;
@@ -29,8 +32,13 @@ AVLNODE create(Appointment appt);
 int height(AVLNODE root);
 int balancefactor(AVLNODE root);
 AVLNODE rotateLeft(AVLNODE x);
+AVLNODE LR(AVLNODE root);
+AVLNODE RL(AVLNODE root);
 AVLNODE rotateRight(AVLNODE x);
 AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt);
 AVLNODE deleteNodeInAVL(AVLNODE root, int id);
 AVLNODE search(AVLNODE root, int id);
-void addToHistory(AVLNODE node, Appointment appt);
+void initQueue(Queue* q);
+void enqueue(Queue* q, int appointmentId);
+void printHistory(Queue* q);
+#endif
