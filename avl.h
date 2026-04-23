@@ -1,19 +1,3 @@
-typedef struct Appointment {
-    int id;                 
-    char patientName[50];
-    char docName[50];
-    char date[15];           
-    char timeSlot[10];       
-    int priority;
-struct Queue history;
-} Appointment;
-struct node {
-    Appointment data;
-    int ht;
-    struct node* left;
-    struct node* right;
-struct Queue history; 
-};
 typedef struct QNode {
     Appointment data;
     struct QNode* next;
@@ -22,6 +6,23 @@ typedef struct Queue {
     QNode* front;
     QNode* rear;
 } Queue;
+
+typedef struct Appointment {
+    int id;                 
+    char patientName[50];
+    char docName[50];
+    char date[15];           
+    char timeSlot[10];       
+    int priority;
+ Queue history;
+} Appointment;
+struct node {
+    Appointment data;
+    int ht;
+    struct node* left;
+    struct node* right;
+
+};
 
 typedef struct node* AVLNODE;
 AVLNODE create(Appointment appt);
