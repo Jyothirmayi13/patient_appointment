@@ -67,14 +67,15 @@ AVLNODE rotateLeft(AVLNODE x) {
     return y;
 }
 AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt) {
-    if(appt==root->data.id){
-        addToHistory(root,appt);
-        return root;)
-        
-    if(root == NULL) {
-        root = newNode(appt);
-        printf("Appointment booked successfully.\n");
+    if(root == NULL) {                    
+        return create(appt);              
     }
+    if(appt.id == root->data.id) { 
+        addToHistory(root, appt);
+        return root;
+    }  
+        
+    
     else if(appt.id > root->data.id) {
         root->right = insertNodeInAVL(root->right, appt);
         if(balancefactor(root) == -2) {
