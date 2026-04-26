@@ -13,7 +13,7 @@ void enqueue(Queue* q, int appointId) {
         printf("Memory allocation failed.\n");
         return;
     }
-    newNode->appointId = appointId;
+    newNode->appointID= appointId;
     newNode->next = NULL;
 
     if(q->rear == NULL) {
