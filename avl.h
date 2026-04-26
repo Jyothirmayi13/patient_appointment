@@ -39,6 +39,15 @@ AVLNODE insertNodeInAVL(AVLNODE root, Appointment appt);
 AVLNODE deleteNodeInAVL(AVLNODE root, int id);
 AVLNODE search(AVLNODE root, int id);
 void initQueue(Queue* q);
-void enqueue(Queue* q, int appointmentId);
+AVLNODE minValueNode(AVLNODE root);
+void addToHistory(AVLNODE node, Appointment appt);
+void saveToFile(AVLNODE root, const char* filename);
+AVLNODE loadFromFile(AVLNODE root, const char* filename);
+void searchByName(AVLNODE root, const char* name);
+void searchByDate(AVLNODE root, const char* date);
+void searchByDoctor(AVLNODE root, const char* docName);
+void displayAppointment(Appointment appt);
+void displayAll(AVLNODE root);
+void enqueue(Queue* q, int appointId);
 void printHistory(Queue* q);
 #endif
