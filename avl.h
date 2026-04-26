@@ -2,7 +2,7 @@
 #define AVL_H
 
 typedef struct QNode {
-    Appointment data;
+    int appointID;
     struct QNode* next;
 } QNode;
 typedef struct Queue {
