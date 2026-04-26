@@ -32,7 +32,7 @@ void printHistory(Queue* q) {
     QNode* temp = q->front;
     printf("Appointment History (IDs): ");
     while(temp != NULL) {
-        printf("%d ", temp->appointmentId);
+        printf("%d ", temp->appointID);
         temp = temp->next;
     }
     printf("\n");
