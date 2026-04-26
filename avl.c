@@ -187,5 +187,7 @@ AVLNODE search(AVLNODE root, int id) {
     else
         return search(root->right, id);
 }
-
+void addToHistory(AVLNODE node, Appointment appt) {
+    enqueue(&node->data.history, appt.id);
+}
     
